@@ -1,25 +1,36 @@
-dict_par = {'global':'None'}
-dict_var = {'global':[]}
-def create(namespace,arg):
-    global dict_par,dict_var
-    dict_par[namespace]=arg
-    dict_var[namespace]=[]
-def add(namespace,arg):
-    global dict_var
-    dict_var[namespace].append(arg)
-def get(namespace,arg):
-    global dict_par,dict_var
+n = int(input())
+space = {'global': []}
 
-amount=int(input())
-response=[]
-for i in range(amount):
-    cmd,namespace,arg=input().split()
+
+def create(nsp, arg):
+    space[nsp] = []
+    space[arg].append(nsp)
+
+
+def add(nsp, arg):
+    space[nsp].append(arg)
+
+
+def get(nsp, arg):
+    x = space.get(nsp)
+    if x == 'None':
+        return x
+    if arg in x:
+        return nsp
+    else:
+        for i in space.keys():
+            if nsp in space[i]:
+                return get(i, arg)
+
+
+response = []
+for i in range(n):
+    cmd, nsp, arg = input().split()
     if cmd == 'create':
-        create(namespace,arg)
-    if cmd == 'add':
-        add(namespace,arg)
-    if cmd == 'get':
-        response.append(get(namespace,arg))
-print(dict_var,dict_par)
+        create(nsp, arg)
+    elif cmd == 'add':
+        add(nsp, arg)
+    elif cmd == 'get':
+        response.append(get(nsp, arg))
 for i in response:
     print(i)
