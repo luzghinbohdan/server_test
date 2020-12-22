@@ -24,12 +24,12 @@ more_than_one_reelset_in_main_game = ['100_monkeys',
                                       'candy_mix',
                                       'candy_mix_mob',
                                       ]
-PLAYER_CASH = 'http://wl-beta.dev.dzento.com/api?cm=player_cash&wlid=16395&cash_type=real&type=set&money=10000000'
-NGL_ADM = 'https://dcpbot-ods-02.dev.dzento.com/cgi/admservice/admservice.cgi'
+PLAYER_CASH = 'http://url.com/api?cm=player_cash&wlid=16395&cash_type=real&type=set&money=10000000'
+NGL_ADM = 'https://url.com/cgi/admservice/admservice.cgi'
 COMMAND_SHIFT = '{NGL_CGI}?post=json:%7B"shift": %7B"shifts":"{shift_index}"%7D, "clear": "true", "session": "{' \
                 'session}", "command": "deadpool"%7D '
 COMMAND_GAMES = '{NGL_ADM}?cm=games&format=xml'
-NGL_CGI = 'https://dcpbot-ods-02.dev.dzento.com/cgi/server.cgi'
+NGL_CGI = 'https://url.com/cgi/server.cgi'
 KEY = 'fe7992d9b4008bda95431f3a548670eb'
 CONNECT_URL = '{NGL_CGI}?post=json:%7B"command":"connect","playerguid":"{key}","game":"{game_name}"%7D'
 START_URL = '{NGL_CGI}?post=json:%7B"session":"{session}","command":"start"%7D'
@@ -48,8 +48,8 @@ def get_game_name():
 
 
 class TestServer(BaseTestCase):
-    test_case_url = 'https://testrail.dzento.com/index.php?/cases/view/173597,' \
-                    'https://testrail.dzento.com/index.php?/cases/view/173600'
+    test_case_url = 'https://testrail.url.com/index.php?/cases/view/173597,' \
+                    'https://testrail.url.com/index.php?/cases/view/173600'
     not_valid_not = 'NOTVALIDNOT'
     not_game = 'not game'
     not_current = 'not current'
