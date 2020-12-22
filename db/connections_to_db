@@ -1,6 +1,6 @@
 {"ngl":{
-    "host":"dcpbot-ods-02-devm-dzt-lxc.dzento.com",
-    "user":"python.tests",
-    "password":"12345",
-    "db":"ngl"
+    "host":"url.com",
+    "user":"python.test",
+    "password":"123456",
+    "db":"test_data"
   }}
