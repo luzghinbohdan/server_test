@@ -46,7 +46,7 @@ class BaseTestCase(TestCase):
         """Failed test report generator"""
         pytest_failed_test_command = self.get_failed_test_command('pytest')
         return (
-            'LuckyLabs',
+            'CompanyName',
             self.test_case_url,
             pytest_failed_test_command,
         )
