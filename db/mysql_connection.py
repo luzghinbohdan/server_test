@@ -13,11 +13,11 @@ class MariaDBConnection:
     def maria_connection():
         try:
             conn = mariadb.connect(
-                user="python.tests",
-                password="12345",
-                host="dcpbot-ods-02-devm-dzt-lxc.dzento.com",
+                user="python.test",
+                password="123456",
+                host="url.com",
                 port=3306,
-                database="ngl")
+                database="test_data")
         except mariadb.Error as e:
             log.error(f"Error connecting to MariaDB Platform: {e}")
             sys.exit(1)
