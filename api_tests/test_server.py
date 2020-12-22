@@ -116,10 +116,6 @@ class TestServer(BaseTestCase):
         self.set_money()
         res_star = self.response_start(one_game_name).get('game', False)
         res_recon = self.response_reconnect(one_game_name).get('game', False)
-        # if not res_recon:
-        #     res_recon = res_reconnect.get('data')
-        # if not res_star:
-        #     res_star = res_start.get('data')
         result = check_difference(res_star, res_recon)
         log.error('{}'.format(json.dumps(result, indent=4, sort_keys=True)))
         bool_result = bool(result)
