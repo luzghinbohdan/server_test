@@ -15,14 +15,14 @@ log = logging.getLogger(__name__)
 log.setLevel('INFO')
 
 
-broken_db_list = ['american_poker_2',
-                  'american_poker_2_mob',
-                  'dynamite_bingo',
+broken_db_list = ['poker',
+                  'poker_mob',
+                  'bingo',
                   ]
-more_than_one_reelset_in_main_game = ['100_monkeys',
-                                      '100_monkeys_mob',
-                                      'candy_mix',
-                                      'candy_mix_mob',
+more_than_one_reelset_in_main_game = ['monkeys',
+                                      'monkeys_mob',
+                                      'candy',
+                                      'candy_mob',
                                       ]
 PLAYER_CASH = 'http://url.com/api?cm=player_cash&wlid=16395&cash_type=real&type=set&money=10000000'
 NGL_ADM = 'https://url.com/cgi/admservice/admservice.cgi'
