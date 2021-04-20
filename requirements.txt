@@ -10,7 +10,7 @@ jsondiff==1.2.0
 more-itertools==8.4.0
 packaging==20.4
 pluggy==0.6.0
-py==1.9.0
+py==1.10.0
 pyparsing==2.4.7
 pytest==3.6.0
 pytest-html==1.11.0
